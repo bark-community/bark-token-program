@@ -1,7 +1,3 @@
-
-(https://raw.githubusercontent.com/bark-community/bark-token-program/main/bark/assets/hero.png).
-
-
 # BARK Token Program
 
 ## 1. Overview
