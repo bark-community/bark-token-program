@@ -1,0 +1,13 @@
+{
+  "name": "bark-token-program",
+  "version": "1.0.0",
+  "description": "The SPL 2022 Token Program is a Solana-based token system designed to facilitate the creation, transfer, and management of a digital asset named BARK on the Solana blockchain",
+  "main": "main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node-ts main.ts"
+  },
+  "keywords": [],
+  "author": "Bark Foundation",
+  "license": "MIT"
+}

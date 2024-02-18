@@ -1,23 +1,30 @@
 
-[](https://raw.githubusercontent.com/bark-community/bark-token/bark/bark.png).
+[banner](https://raw.githubusercontent.com/bark-community/bark-token-program/main/bark/assets/hero.png).
 
-# Bark Token Program Documentation
+
+# BARK Token Program
 
 ## 1. Overview
 
-The Bark Token Program is a Solana-based token system designed to facilitate the creation, transfer, and management of a digital asset named "BARK" on the Solana blockchain. Leveraging the Solana web3.js library, the program enables seamless interactions with the Solana blockchain.
+The BARK Token Program is a Solana-based token system designed to facilitate the creation, transfer, and management of a digital asset named "BARK" on the Solana blockchain. Leveraging the Solana web3.js library, the program enables seamless interactions with the Solana blockchain.
+
+## What are Token Extensions?
+
+"Token Extensions (also known as Token-2022) are an advanced token program on the Solana blockchain, extending the capabilities of the existing Token Program. It's designed to offer developers enhanced flexibility and additional functionalities without compromising the safety of current tokens."
+
+"This program encompasses all features of its predecessor (it maintains compatibility with the original Token instruction and account layouts) while providing new instructions and functionality. These extensions introduce new fields in mints and accounts."
 
 ## 2. Architecture
 
 The program is structured with modular components, utilizing Solana's SPL 2022 Token Standard and SPL Token Metadata programs. Key components include:
 
 - **Solana Token 2022 Program (SPL):**
-  - Manages the creation, transfer, and minting of BARK tokens.
+  - Manages the creation, transfer, and minting of BARK.
   - Implements a transfer fee mechanism for each token transfer.
 
 - **Token Metadata Program:**
   - Manages metadata associated with BARK, including name, symbol, website, and social media links.
-  - Enables the creation and updating of metadata for BARK tokens.
+  - Enables the creation and updating of metadata for BARK.
 
 - **Bark Token Program:**
   - Coordinates interactions between the SPL 2022 Token Standard and Token Metadata programs.
@@ -52,11 +59,11 @@ The program is structured with modular components, utilizing Solana's SPL 2022 T
 
 ### Withdraw Fees from Mint BARK Account
 
-- Withdraw fees collected in the Mint account.
+- Fees (or taxes) associated with transferring BARK tokens. Withdraw fees collected in the Mint account.
 
 ### Check Wallet Balance
 
-- Retrieves and displays the balance of the wallet in SOL.
+- Retrieves and displays the balance of the wallet in SOL or BARK.
 
 ### Check BARK Token Balances
 
@@ -68,7 +75,7 @@ The program is structured with modular components, utilizing Solana's SPL 2022 T
 
 ### Harvest Withheld Fees to Fee Account
 
-- Transfers withheld fees to the fee account.
+- Transfers withheld fees to the fee (Treasury) account.
 
 ### Distribute BARK to Multiple Accounts
 
@@ -76,10 +83,10 @@ The program is structured with modular components, utilizing Solana's SPL 2022 T
 
 ## 4. Technical Documentation
 
-### Smart Contract Structure
+### Program (Smart Contract) Structure
 
-- Detailed breakdown of the smart contract structure.
-- Explanation of key functions and their interactions.
+- Detailed breakdown of the BARK token program (smart contract) structure.
+- Explanation of key functions and BARK interactions.
 
 ### API Endpoints
 
@@ -109,9 +116,9 @@ The program is structured with modular components, utilizing Solana's SPL 2022 T
 
 ### Governance
 
-- If applicable, information on any governance features associated with BARK tokens.
+- Information on any governance features associated with BARK tokens.
 
-## 6. How It Works
+## 6. How It Works ?
 
 The Bark Token Program follows a step-by-step workflow:
 
