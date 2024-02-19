@@ -1,16 +1,3 @@
-# BARK Token-2022 program
-
-A BARK token program on the Solana blockchain, usable for fungible and non-fungible tokens.
-
-This program provides an interface and implementation that third parties can
-utilize to create and use their tokens.
-
-Full documentation is available at https://spl.solana.com/token-2022
-
-The Token-2022 program is still under audit and not meant for full production use.
-In the meantime, all clusters have the latest program deployed **for testing and
-development purposes ONLY**.
-
 To install the Solana CLI and create a Solana token, you need to follow these steps. Make sure you have Rust and npm installed on your machine before proceeding.
 
 ### 1. Install Rust:
@@ -47,18 +34,18 @@ Now, you can use the Solana CLI to create a token. Here's a simplified example:
 
 ```bash
 # Create a new Solana wallet
-solana-keygen new --outfile ~/test-wallet.json
+solana-keygen new --outfile ~/bark-wallet.json
 
 or create a vanity wallet generator / address
 
-solana-keygen grind --starts-with test:1
+solana-keygen grind --starts-with BARK:1
 
-defining prefixes or suffixes (e.g., test...)
+defining prefixes or suffixes (e.g., BARK...)
 
 # Save the wallet address for later use
-WALLET_ADDRESS=$(solana address -k ~/test-wallet.json)
+WALLET_ADDRESS=$(solana address -k ~/bark-wallet.json)
 
-Example: testanRruQPJbJoBEJATQg5hrmaQ1NNNFdTwdgGgRaBd.json
+BARKanRruQPJbJoBEJATQg5hrmaQ1NNNFdTwdgGgRaBd.json
 
 Privatekey:
 
@@ -78,15 +65,10 @@ solana-tokens initialize-account $WALLET_ADDRESS $TOKEN_MINT_ADDRESS
 solana-tokens mint-to $WALLET_ADDRESS 100
 ```
 
-Note: The Solana CLI commands might evolve with newer versions. Please refer to the official Solana documentation for the most up-to-date instructions: [Solana Documentation](https://docs.solana.com/).
-
 ## Solana Faucet
 
 https://faucet.solana.com/
 
 In this example, we create a new Solana wallet, airdrop some SOL to it, create a new token, and mint some tokens to the wallet. Adjust the parameters based on your needs.
 
-## Solana Audit
-
-The repository [README](https://github.com/solana-labs/solana-program-library#audits)
-contains information about program audits.
+Note: The Solana CLI commands might evolve with newer versions. Please refer to the official Solana documentation for the most up-to-date instructions: [Solana Documentation](https://docs.solana.com/).

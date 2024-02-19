@@ -4,10 +4,13 @@
   "description": "The SPL 2022 Token Program is a Solana-based token system designed to facilitate the creation, transfer, and management of a digital asset named BARK on the Solana blockchain",
   "main": "main.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node-ts main.ts"
+    "test": "node-ts test/test-bark.ts",
+    "start": "node-ts src/main.ts",
+    "metadata": "node-ts src/metadata.json",
+    "build": "tsc",
+    "lint": "eslint src"
   },
-  "keywords": [],
+  "keywords": ["bark", "solana", "spl-token"],
   "author": "Bark Foundation",
   "license": "MIT",
   "dependencies": {
@@ -15,7 +18,17 @@
     "@solana/spl-token": "^0.4.0",
     "@solana/spl-token-metadata": "^0.1.2",
     "@solana/web3.js": "^1.90.0",
+    "dotenv": "^10.0.0",
     "node-ts": "^6.0.1",
+    "esrun": "^3.2.26",
     "typescript": "^5.3.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bark-community/bark-token-program.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bark-community/bark-token-program/issues"
+  },
+  "documentation": "https://app.gitbook.com/"
 }
