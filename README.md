@@ -1,26 +1,17 @@
-# BARK Token Program
-
-## Overview
-
-The BARK Token Program is a Solana-based token system designed to facilitate the creation, transfer, and management of a digital asset named "BARK" on the Solana blockchain. Leveraging the Solana web3.js library, the program enables seamless interactions with the Solana blockchain.
-
-# Solana BARK Token Interaction
+# BARK Token Interaction
 
 This repository contains a TypeScript script for interacting with the BARK token on the Solana blockchain using the Solana Web3.js library and the SPL Token program.
 
-```markdown
 ## Table of Contents
 
-- [BARK Token Program](#bark-token-program)
-  - [Overview](#overview)
-- [Solana BARK Token Interaction](#solana-bark-token-interaction)
+- [BARK Token Interaction](#bark-token-interaction)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
   - [Features](#features)
   - [Requirements](#requirements)
   - [Getting Started](#getting-started)
   - [Usage](#usage)
-  - [Functions:](#functions)
+  - [Functions](#functions)
   - [Contributing](#contributing)
   - [License](#license)
 
@@ -43,10 +34,6 @@ This TypeScript script demonstrates the creation, initialization, and interactio
 - npm (Node Package Manager)
 - Solana devnet cluster access
 - Solana wallet with sufficient funds for transaction fees
-
-## Testing
-
-This Program is tested on Solana Playground https://beta.solpg.io/
 
 ## Getting Started
 
@@ -75,7 +62,7 @@ This Program is tested on Solana Playground https://beta.solpg.io/
 
 Ensure that you have met the [requirements](#requirements) and have configured the script with your Solana wallet details. Run the script to perform various BARK token interactions on the Solana blockchain.
 
-## Functions:
+## Functions
 
 - **initializeMintAccount():** Initializes the Mint BARK account.
 - **initializeSolanaAccounts():** Initializes source and destination Solana token accounts.
