@@ -1,146 +1,95 @@
 # BARK Token Program
 
-## 1. Overview
+## Overview
 
 The BARK Token Program is a Solana-based token system designed to facilitate the creation, transfer, and management of a digital asset named "BARK" on the Solana blockchain. Leveraging the Solana web3.js library, the program enables seamless interactions with the Solana blockchain.
 
-## What are Token Extensions?
+# Solana BARK Token Interaction
 
-"Token Extensions (also known as Token-2022) are an advanced token program on the Solana blockchain, extending the capabilities of the existing Token Program. It's designed to offer developers enhanced flexibility and additional functionalities without compromising the safety of current tokens."
+This repository contains a TypeScript script for interacting with the BARK token on the Solana blockchain using the Solana Web3.js library and the SPL Token program.
 
-"This program encompasses all features of its predecessor (it maintains compatibility with the original Token instruction and account layouts) while providing new instructions and functionality. These extensions introduce new fields in mints and accounts."
+```markdown
+## Table of Contents
 
-## 2. Architecture
+- [BARK Token Program](#bark-token-program)
+  - [Overview](#overview)
+- [Solana BARK Token Interaction](#solana-bark-token-interaction)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Features](#features)
+  - [Requirements](#requirements)
+  - [Getting Started](#getting-started)
+  - [Usage](#usage)
+  - [Functions:](#functions)
+  - [Contributing](#contributing)
+  - [License](#license)
 
-The program is structured with modular components, utilizing Solana's SPL 2022 Token Standard and SPL Token Metadata programs. Key components include:
+## Introduction
 
-- **Solana Token 2022 Program (SPL):**
-  - Manages the creation, transfer, and minting of BARK.
-  - Implements a transfer fee mechanism for each token transfer.
+This TypeScript script demonstrates the creation, initialization, and interaction with a custom token (BARK) on the Solana blockchain. It covers various functions, including minting, transferring tokens with fees, fee withdrawal, and more.
 
-- **Token Metadata Program:**
-  - Manages metadata associated with BARK, including name, symbol, website, and social media links.
-  - Enables the creation and updating of metadata for BARK.
+## Features
 
-- **Bark Token Program:**
-  - Coordinates interactions between the SPL 2022 Token Standard and Token Metadata programs.
-  - Implements additional features specific to the BARK token, such as fee harvesting.
+- Minting BARK tokens on the Solana blockchain.
+- Transferring BARK tokens with fees.
+- Withdrawing fees from BARK accounts.
+- Creating a new fee account.
+- Harvesting and transferring withheld fees.
+- Checking BARK token and Solana account balances.
 
-## 3. Functions and Features
+## Requirements
 
-### Create Mint Account
+- Node.js (v14 or higher)
+- npm (Node Package Manager)
+- Solana devnet cluster access
+- Solana wallet with sufficient funds for transaction fees
 
-- Check if the Mint account for BARK tokens exists; if not, create a new one.
-- Initializes the Mint with transfer fee configuration.
+## Testing
 
-### Create BARK Token Account
+This Program is tested on Solana Playground https://beta.solpg.io/
 
-- Creates a new BARK token account associated with a specific owner's public key.
+## Getting Started
 
-### BARK Transfer with Fee
+1. Clone the repository:
 
-- Performs a BARK token transfer with a dynamic transfer fee based on a percentage of the transfer amount.
+   ```bash
+   git clone https://github.com/bark-community/bark-token-program.git
+   cd bark
+   ```
 
-### Withdraw Withheld BARK from Token Accounts
+2. Install dependencies:
 
-- Withdraws withheld BARK tokens from accounts with non-zero fees.
+   ```bash
+   npm install
+   ```
 
-### Perform BARK Mint
+3. Configure your Solana wallet details in the script.
 
-- Mints new BARK tokens into a specified account.
+4. Execute the script:
 
-### Harvest Withheld Fees to Mint Account
+   ```bash
+   npm start
+   ```
 
-- Collects withheld fees from BARK token accounts and deposits them into the Mint account.
+## Usage
 
-### Withdraw Fees from Mint BARK Account
+Ensure that you have met the [requirements](#requirements) and have configured the script with your Solana wallet details. Run the script to perform various BARK token interactions on the Solana blockchain.
 
-- Fees (or taxes) associated with transferring BARK tokens. Withdraw fees collected in the Mint account.
+## Functions:
 
-### Check Wallet Balance
+- **initializeMintAccount():** Initializes the Mint BARK account.
+- **initializeSolanaAccounts():** Initializes source and destination Solana token accounts.
+- **transferBarkWithFee():** Transfers BARK tokens with fees.
+- **withdrawFees():** Withdraws fees from BARK accounts.
+- **createFeeAccount():** Creates a new fee account.
+- **harvestWithheldTokensToMint():** Harvests withheld fees and transfers to the Mint BARK account.
+- **checkBarkBalance():** Checks the BARK token balance of the wallet.
+- **checkBalance():** Checks the Solana account balance of the wallet.
 
-- Retrieves and displays the balance of the wallet in SOL or BARK.
+## Contributing
 
-### Check BARK Token Balances
+Contributions are welcome! If you find a bug or have an enhancement in mind, please open an issue or submit a pull request following the [contribution guidelines](CONTRIBUTING.md).
 
-- Retrieves and displays the balances of BARK token accounts associated with the wallet.
+## License
 
-### Create or Get Fee Account
-
-- Check if a fee account exists; if not, create a new fee account.
-
-### Harvest Withheld Fees to Fee Account
-
-- Transfers withheld fees to the fee (Treasury) account.
-
-### Distribute BARK to Multiple Accounts
-
-- Distributes a specified amount of BARK tokens to multiple accounts.
-
-## 4. Technical Documentation
-
-### Program (Smart Contract) Structure
-
-- Detailed breakdown of the BARK token program (smart contract) structure.
-- Explanation of key functions and BARK interactions.
-
-### API Endpoints
-
-- Documentation of any API endpoints provided by the Bark Token Program.
-
-### Security Measures
-
-- Overview of security measures implemented in the smart contract.
-- Steps taken to ensure the safety of user assets and data.
-
-## 5. Tokenomics
-
-### Token Supply
-
-- Total initial supply of BARK tokens.
-- Distribution plan for the token supply.
-
-### Transfer Fees
-
-- Explanation of the transfer fee mechanism.
-- Breakdown of how transfer fees are calculated.
-
-### Minting and Burning
-
-- Details on the minting process for new BARK tokens.
-- Explanation of any burning mechanisms.
-
-### Governance
-
-- Information on any governance features associated with BARK tokens.
-
-## 6. How It Works ?
-
-The Bark Token Program follows a step-by-step workflow:
-
-1. **Initialization:**
-   - Mint account creation and initialization.
-   - Setup of wallet and keypairs.
-
-2. **BARK Token Operations:**
-   - BARK token transfers with dynamic transfer fees.
-   - Minting new BARK tokens.
-   - Withdrawal of withheld fees.
-
-3. **Metadata Management:**
-   - Creation and updating of metadata associated with the BARK token.
-
-4. **Fee Handling:**
-   - Harvesting withheld fees from token accounts to the Mint account.
-   - Withdrawal of fees from the Mint account.
-   - Distribution of fees to a designated fee account.
-
-5. **Balance Checking:**
-   - Checking the balance of the wallet and BARK token accounts.
-
-6. **Advanced Features:**
-   - Distribution of BARK tokens to multiple accounts.
-
-## 7. Conclusion
-
-This documentation provides a detailed overview of the Bark Token Program's architecture, functions, and features, including Technical Documentation and Tokenomics. Refer to the actual code and its comments for a more in-depth understanding of the implementation.
+[MIT License](LICENSE).
