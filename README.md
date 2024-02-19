@@ -9,7 +9,7 @@ This repository contains a TypeScript script for interacting with the BARK token
   - [Introduction](#introduction)
   - [Features:](#features)
   - [Requirements](#requirements)
-  - [Networks: BARK Program(s)](#networks-bark-programs)
+  - [Networks:](#networks)
   - [Getting Started](#getting-started)
   - [Usage](#usage)
   - [Functions](#functions)
@@ -36,7 +36,7 @@ This TypeScript script demonstrates the creation, initialization, and interactio
 - Solana devnet cluster access
 - Solana wallet with sufficient funds for transaction fees
 
-## Networks: BARK Program(s)
+## Networks:
 
 **Solana Explorer:**
 
