@@ -7,8 +7,9 @@ This repository contains a TypeScript script for interacting with the BARK token
 - [BARK Token Interaction](#bark-token-interaction)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
-  - [Features](#features)
+  - [Features:](#features)
   - [Requirements](#requirements)
+  - [Networks: BARK Program(s)](#networks-bark-programs)
   - [Getting Started](#getting-started)
   - [Usage](#usage)
   - [Functions](#functions)
@@ -19,7 +20,7 @@ This repository contains a TypeScript script for interacting with the BARK token
 
 This TypeScript script demonstrates the creation, initialization, and interaction with a custom token (BARK) on the Solana blockchain. It covers various functions, including minting, transferring tokens with fees, fee withdrawal, and more.
 
-## Features
+## Features:
 
 - Minting BARK tokens on the Solana blockchain.
 - Transferring BARK tokens with fees.
@@ -34,6 +35,14 @@ This TypeScript script demonstrates the creation, initialization, and interactio
 - npm (Node Package Manager)
 - Solana devnet cluster access
 - Solana wallet with sufficient funds for transaction fees
+
+## Networks: BARK Program(s)
+
+**Solana Explorer:**
+
+- **Devnet:**
+- **Testnet:**
+- **Mainnet:**
 
 ## Getting Started
 
