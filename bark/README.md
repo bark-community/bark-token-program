@@ -1,4 +1,4 @@
-# BARK Token Program Documentation
+# BARK Token Program
 
 ## Table of Contents
 
